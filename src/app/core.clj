@@ -16,13 +16,7 @@
   (json/parse-string (slurp req) true))
 
 (def routes
-  {"Token"  {:POST (fn [{body :body :as req}]
-                     (let [token (:token (parse-request body))]
-                       (do
-                         (println "Token initialized")
-                         (bot/set-token token))
-                       {:status 200 :body "Token accepted"}))}
-   "Start" {:GET (fn [_]
+  {"Start" {:GET (fn [_]
                    (if (bot/start-long-polling)
                      (do
                        (println "Bot is ready")
