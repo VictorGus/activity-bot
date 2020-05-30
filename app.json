@@ -1,0 +1,5 @@
+{
+  "name": "Activity Bot",
+  "description": "Activity alerting bot",
+  "image": "heroku/clojure"
+}

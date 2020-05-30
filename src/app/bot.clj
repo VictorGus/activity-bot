@@ -1,10 +1,16 @@
 (ns app.bot
   (:require [morse.handlers :as m-h]
             [morse.api :as m-api]
-            [morse.polling :as m-p]))
+            [morse.polling :as m-p]
+            [overtone.at-at :as overtone]))
 
 (def token (System/getenv "TELEGRAM_API_TOKEN"))
+(def overtone-pool (overtone/mk-pool))
 
+(comment
+  (overtone/every 1000 #(println "I am cool!") overtone-pool)
+
+  (overtone/stop-and-reset-pool! overtone-pool))
 
 (m-h/defhandler bot-api
   (m-h/command-fn "start" (fn [{{id :id :as chat} :chat}]

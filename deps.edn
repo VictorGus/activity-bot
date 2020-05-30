@@ -3,11 +3,8 @@
              "clojars" {:url "https://repo.clojars.org/"}}
 
  :deps  {org.clojure/clojure         {:mvn/version "1.10.1"}
-         org.clojure/core.async      {:mvn/version "1.1.587"}
-         org.clojure/java.jdbc       {:mvn/version "0.7.11"}
+         overtone/at-at              {:mvn/version "1.2.0"}
          clj-postgresql              {:mvn/version "0.7.0"}
-         hikari-cp                   {:mvn/version "2.10.0"}
-         org.postgresql/postgresql   {:mvn/version "42.2.9.jre7"}
          http-kit                    {:mvn/version "2.3.0"}
          clj-yaml                    {:mvn/version "0.4.0"}
          clj-http                    {:mvn/version "3.10.1"}
@@ -17,8 +14,6 @@
          ring                        {:mvn/version "1.7.1"}
          ring/ring-defaults          {:mvn/version "0.3.2"}
          ring-cors                   {:mvn/version "0.1.13"}
-         honeysql                    {:mvn/version "0.9.8"}
-         nilenso/honeysql-postgres   {:mvn/version "0.2.6"}
          morse                       {:mvn/version "0.4.3"}
          cheshire                    {:mvn/version "5.9.0"}}
 
