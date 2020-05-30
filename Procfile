@@ -1,1 +1,1 @@
-web: make run-jar
+web: make build && make run-jar
