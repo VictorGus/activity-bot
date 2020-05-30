@@ -85,7 +85,7 @@
     (reset! state nil)))
 
 (defn start-server []
-  (reset! state (server/run-server app {:port 5000 #_(or (Integer. (System/getenv "PORT")) 5000)})))
+  (reset! state (server/run-server app {:port (or (Integer. )(System/getenv "PORT") 5000)})))
 
 (defn restart-server [] (stop-server) (start-server))
 

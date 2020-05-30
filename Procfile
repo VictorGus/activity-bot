@@ -1,1 +1,1 @@
-web: source .env && make build && make run-jar
+web: make build && make run-jar
